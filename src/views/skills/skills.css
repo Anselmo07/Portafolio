@@ -1,0 +1,41 @@
+.skills {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 2rem; 
+    padding: 1rem; 
+}
+
+.skills div {
+    flex: 0 0 auto;
+    width: 100px; 
+    height: 100px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.skills img {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+
+
+.animal {
+    position: fixed; /* Fija el elemento en la pantalla */
+    left: -100px; /* Comienza fuera de la pantalla (a la izquierda) */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajuste para centrar correctamente */
+    transition: left 0.5s ease; /* Transición suave para la animación */
+    z-index: 10; /* Asegúrate de que esté encima de otros elementos */
+    opacity: 0; /* Comienza invisible */
+}
+
+.animal.visible {
+    left: 20px; /* Posición donde quieres que se detenga */
+    opacity: 1; /* Hace visible el elemento */
+}
+
+
+
