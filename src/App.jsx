@@ -3,6 +3,7 @@ import './App.css'
 import Home from './views/home/home';
 import About from './views/About/about';
 import Skills from './views/skills/skills';
+import Project from './views/MyProject/project'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Home/>
       <About/>
       <Skills/>
+      <Project/>
     </>
   )
 }
