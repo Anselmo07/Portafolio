@@ -14,7 +14,7 @@ function App() {
           <div className="card-body">
             <h5 className="card-title">Ecommerce</h5>
             <p className="card-text">Este Ecommerce esta disenado para que el usuario pueda compra products</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
+            <a href="#" className="btn" style={{ backgroundColor: '#6A0DAD', color: 'white' }}>Go somewhere</a>
           </div>
         </div>
         <div className="card m-5" style={{ width: '18rem' }}>
@@ -22,7 +22,7 @@ function App() {
           <div className="card-body">
             <h5 className="card-title">Ecommerce</h5>
             <p className="card-text">Este Ecommerce esta disenado para que el usuario pueda compra products</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
+            <a href="#" className="btn" style={{ backgroundColor: '#6A0DAD', color: 'white' }}>Go somewhere</a>
           </div>
         </div>
       </div>  
