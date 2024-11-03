@@ -1,3 +1,8 @@
+.skills{
+    margin:  2% 20% 0 20%;
+    border-bottom: 1px solid black;
+}
+
 .card img {
     width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
     height: 8rem; /* Define una altura fija */

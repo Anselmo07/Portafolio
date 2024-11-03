@@ -3,7 +3,7 @@ import "./about.css"
 const About = () => {
     return(
         <section id="About" className="about">
-            <h2>ACERCA DE MI</h2>
+            <h2>🧑‍💻 ACERCA DE MI</h2>
             <p>¡Hola! Soy Anselmo Vecchio, un desarrollador backend entusiasta por la tecnología y el aprendizaje continuo. Nací en Argentina y he dedicado mi carrera a especializarme en el desarrollo de soluciones del lado del servidor. </p>
 
             <p>Estoy en una constante búsqueda de crecimiento profesional, siempre explorando nuevas tecnologías y herramientas. Creo que la combinación de práctica constante y curiosidad intelectual es la clave para enfrentar cualquier desafío técnico</p>

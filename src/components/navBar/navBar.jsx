@@ -6,7 +6,7 @@ const NavBar = () => {
         <>
         
         <nav className="NavBar">
-            <h1>ANSEL</h1>
+            <h1> 💻 ANSEL</h1>
             <ul>
                 <li>ABOUT</li>
                 <li>SKILL</li>

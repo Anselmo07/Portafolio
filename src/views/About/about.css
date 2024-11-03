@@ -1,5 +1,6 @@
 .about{
     text-align: center;
     font-size: 23px;
-    margin:  0 20% 0 20%;
+    margin:  2% 20% 0 20%;
+    border-bottom: 1px solid black;
 }

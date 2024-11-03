@@ -15,8 +15,8 @@ import "./skills.css";
 
 const Skills = () => {
     return (
-        <div>
-            <h2 className='text-center'>Tecnologías y herramientas</h2>
+        <div className="skills">
+            <h2 className='text-center'>🛠️ Tecnologías y herramientas</h2>
             <div className="d-flex justify-content-center flex-wrap">
                 <div className="d-flex flex-column align-items-center m-3">
                     <div className="card mb-3" style={{ width: '8rem' }}>

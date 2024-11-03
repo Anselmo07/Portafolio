@@ -1,0 +1,41 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el ancho y alto de los elementos */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Establece una fuente base */
+    line-height: 1.6; /* Mejora la legibilidad */
+    background-color: #B0C4DE; /* Color platinado de fondo */
+    color: black; /* Color del texto */
+}
+
+/* Estilos básicos para encabezados */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+/* Asegura que los enlaces tengan un aspecto consistente */
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto */
+}
+
+ul, ol {
+    list-style: none; /* Elimina los estilos de listas predeterminados */
+}
+
+/* Estilos para botones */
+button {
+    cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+    border: none; /* Elimina el borde predeterminado */
+    background-color: transparent; /* Elimina el fondo predeterminado */
+}
+
+/* Sombra interior para el cuerpo */
+body {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra interna */
+    
+}

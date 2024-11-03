@@ -6,7 +6,7 @@ import cloudinary from "../.././assets/cloudinary.jpg"
 function App() {
   return (
     <div>
-      <h2 className='text-center'>Mis proyectos</h2>
+      <h2 className='text-center'>💼 Mis proyectos</h2>
       
       <div className="d-flex justify-content-center flex-wrap">
         <div className="card m-5" style={{ width: '18rem' }}>
