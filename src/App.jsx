@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
 
   return (
-    <div style={{ backgroundColor: 'var(--bs-info-border-subtle)', padding: '1px'}}>
+    <div style={{ backgroundColor: 'black', padding: '1px', color:'white'}}>
         <NavBar/>      
         <Home/>
         <About/>

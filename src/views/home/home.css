@@ -3,7 +3,51 @@
     border-bottom: 1px solid black;
 }
 .home h2{
-    font-size: 80px;
+    font-size: 76px;
     text-align: center;
-    
+    margin: 30px;
+}
+
+.home h3{
+    font-size: 50px;
+    text-align: center;
+}
+
+.name{
+    color: greenyellow;
+}
+
+
+.letra-por-letra {
+    display: inline-block;
+  }
+  
+  .letra-por-letra span {
+    opacity: 0;
+    animation: aparecer 0.5s forwards;
+  }
+  
+  .letra-por-letra span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .letra-por-letra span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .letra-por-letra span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  /* Agrega más `nth-child` según el número de letras */
+  
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
 }
