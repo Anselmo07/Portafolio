@@ -6,13 +6,14 @@ const NavBar = () => {
         <>
         
         <nav className="NavBar">
-            <h1> 💻 ANSEL</h1>
-            <ul>
-                <li>ABOUT</li>
-                <li>SKILL</li>
-                <li>MY PROJECT</li>
-                <li>CONTACT</li>
-            </ul>
+            <div>
+                <ul>
+                    <li>ABOUT</li>
+                    <li>SKILL</li>
+                    <li>MY PROJECT</li>
+                    <li>CONTACT</li>
+                </ul>
+            </div>
         </nav>
         </>
     );

@@ -1,10 +1,11 @@
 .NavBar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 10px 20px;
     margin:  2% 20% 0 20%;
-    /* background-color: #6A0DAD; */
+    /* border: 1px solid wheat; */
+    
 }  
 .NavBar h1 {
     color: white;
