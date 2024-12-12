@@ -8,10 +8,9 @@ const NavBar = () => {
         <nav className="NavBar">
             <div>
                 <ul>
-                    <li>ABOUT</li>
-                    <li>SKILL</li>
-                    <li>MY PROJECT</li>
-                    <li>CONTACT</li>
+                    <li>INICIO</li>
+                    <li>PROYECTOS</li>
+                    <li>CONTACTO</li>
                 </ul>
             </div>
         </nav>

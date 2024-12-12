@@ -1,12 +1,13 @@
 // import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de que Bootstrap esté importado
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './contact.css' // Asegúrate de que Bootstrap esté importado
 
 const Contact = () => {
     return (
         <div className="container my-5"> {/* Contenedor principal con márgenes verticales */}
             <h2 className="text-center mb-4 text-primary">Contacto</h2> {/* Título centrado con color */}
-            <div className="card text-center shadow-lg"> {/* Card con sombra intensa */}
-                <div className="card-header " style={{ backgroundColor: '#6A0DAD', color: 'white' }}> {/* Cabecera de la card */}
+            <div className="card text-center shadow-lg cardContac"> {/* Card con sombra intensa */}
+                <div className="card-header " style={{ backgroundColor: 'green', color: 'white' }}> {/* Cabecera de la card */}
                     <h3 className="mb-0">Información de Contacto</h3> {/* Título dentro de la card */}
                 </div>
                 <div className="card-body">
