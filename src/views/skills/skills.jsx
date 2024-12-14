@@ -1,6 +1,6 @@
 import ts from "../../assets/ts.png";
 import api from "../../assets/api.png";
-import git from "../../assets/github_logo.jfif";
+import git from "../../assets/Github.png";
 import Nest from "../../assets/Nest.jpg";
 import node from "../../assets/node.png";
 import cloudinary from "../../assets/cloudinary.jpg";
@@ -8,7 +8,7 @@ import es6 from "../../assets/es6.jpg";
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import PostgresSQL from "../../assets/Postgresql.png";
-import postman from "../../assets/postman.jfif";
+import postman from "../../assets/Postman.jpg";
 import jira from "../../assets/jira.png";
 
 import "./skills.css";
@@ -19,7 +19,7 @@ const Skills = () => {
             <h2 className='text-center'>🛠️ Tecnologías y herramientas</h2>
             <div className="d-flex justify-content-center flex-wrap">
                 <div className="d-flex flex-column align-items-center m-3">
-                    <div className="card mb-3" style={{ width: '8rem' }}>
+                    <div className="card mb-3 border border-0" style={{ width: '8rem' }}>
                         <img src={ts} className="card-img-top" alt="TypeScript" />
                     </div>
                     <div className="card mb-3" style={{ width: '8rem' }}>

@@ -1,13 +1,30 @@
-.skills{
-    margin:  2% 20% 0 20%;
+.skills {
+    margin: 2% 20% 0 20%;
     border-bottom: 1px solid black;
 }
 
-.card img {
-    width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
-    height: 8rem; /* Define una altura fija */
-    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+.card {
+    border: none;
+    box-shadow: none;
+    background-color: black;
+    margin: 0;
+    padding: 0;
 }
+
+.card img {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    background-color: black;
+    border: none;
+    display: block;
+}
+
+.card-img-top {
+    border: none;
+    background-color: black;
+}
+
 
 
 
