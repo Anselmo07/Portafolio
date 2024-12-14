@@ -3,12 +3,12 @@ import "./about.css"
 const About = () => {
     return(
         <section id="About" className="about">
-            <h2>🧑‍💻 ACERCA DE MI</h2>
-            <p>¡Hola! Soy Anselmo Vecchio, un desarrollador backend entusiasta por la tecnología y el aprendizaje continuo. Nací en Argentina y he dedicado mi carrera a especializarme en el desarrollo de soluciones del lado del servidor. </p>
 
-            <p>Estoy en una constante búsqueda de crecimiento profesional, siempre explorando nuevas tecnologías y herramientas. Creo que la combinación de práctica constante y curiosidad intelectual es la clave para enfrentar cualquier desafío técnico</p>
+            <p className="aboutText">Tengo 22 años y soy de Entre Ríos, Argentina. Soy desarrollador Full Stack con especialización en backend, donde me enfoco en el desarrollo de soluciones robustas y escalables utilizando tecnologías como JavaScript y TypeScript. A lo largo de mi carrera, he adquirido experiencia en la creación de arquitecturas eficientes y en la optimización del rendimiento del lado del servidor.
 
-            <p>Después de completar mis estudios en Henry, una plataforma reconocida por su enfoque intensivo en programación Full Stack, decidí enfocarme en el backend, desarrollando habilidades sólidas en:</p>
+            Me considero una persona comunicativa, entusiasta, empática y motivadora, con una mentalidad orientada al crecimiento continuo. Disfruto resolviendo problemas complejos, mejorando mis habilidades técnicas y colaborando en equipos multidisciplinarios para alcanzar objetivos comunes.
+
+            Mi objetivo profesional es continuar desarrollándome en el ámbito tecnológico y contribuir con soluciones innovadoras a proyectos que generen un impacto positivo. Estoy comprometido con agregar valor a los equipos y las organizaciones donde trabajo, marcando la diferencia con dedicación y creatividad</p>
         </section>
     );
 };

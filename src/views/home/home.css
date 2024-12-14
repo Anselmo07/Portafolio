@@ -4,13 +4,11 @@
 }
 .home h2{
     font-size: 76px;
-    text-align: center;
-    margin: 30px;
+    margin: 0 5px 30px 0;
 }
 
 .home h3{
     font-size: 50px;
-    text-align: center;
 }
 
 .name{
@@ -20,4 +18,44 @@
 
 .letra-por-letra {
     color: green;
+    letter-spacing: 4px;
+    animation: text 3s forwards steps(12);
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.letra-por-letra::before{
+    content: "";
+    width: 2px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    animation: titilar 0.7s steps(1) infinite;
+}
+
+@keyframes text {
+    from{
+        width: 0%;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes titilar {
+    from{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
 }
