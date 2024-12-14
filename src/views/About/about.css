@@ -1,5 +1,5 @@
 .about{
-    text-align: center;
+    text-align: initial;
     font-size: 23px;
     margin:  2% 20% 0 20%;
     border-bottom: 1px solid black;
@@ -7,4 +7,14 @@
 
 .aboutText{
     text-align: initial;
+    margin-bottom: 5%;
+}
+
+.curriculm{
+    text-decoration: none;
+    text-decoration-line: none;
+    border: 1px solid green;
+    border-radius: 13px;
+    color: green;
+    padding: 1%;
 }

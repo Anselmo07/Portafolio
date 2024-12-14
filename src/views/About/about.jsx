@@ -1,4 +1,5 @@
 import "./about.css"
+import cv from "../../assets/AnselmoVecchio.CV.pdf"
 
 const About = () => {
     return(
@@ -9,6 +10,8 @@ const About = () => {
             Me considero una persona comunicativa, entusiasta, empática y motivadora, con una mentalidad orientada al crecimiento continuo. Disfruto resolviendo problemas complejos, mejorando mis habilidades técnicas y colaborando en equipos multidisciplinarios para alcanzar objetivos comunes.
 
             Mi objetivo profesional es continuar desarrollándome en el ámbito tecnológico y contribuir con soluciones innovadoras a proyectos que generen un impacto positivo. Estoy comprometido con agregar valor a los equipos y las organizaciones donde trabajo, marcando la diferencia con dedicación y creatividad</p>
+
+            <a className='curriculm' href={cv} download="AnselmoVecchio.CV.pdf">Descargar curriculm</a>
         </section>
     );
 };

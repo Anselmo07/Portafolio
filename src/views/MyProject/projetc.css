@@ -1,0 +1,17 @@
+.cardContainer{
+    height: 100%;
+}
+
+.cardBody{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.card:hover{
+    border: 100px solid red; /* Cambia el borde al pasar el cursor */
+    opacity: 0.8; /* Reduce la opacidad para un efecto sutil */
+    transform: scale(1.20); /* Amplía ligeramente la imagen */
+    transition: all 0.3s ease-in-out; /* Suaviza la animación */
+}

@@ -1,4 +1,14 @@
-.cardContac{
-    margin: 0 20% 0 20%;
-    border: 1px solid white;
+.contact h2{
+    font-size: 60px;
+    text-align: center;
+    margin: 6% 0 4% 0;
+}
+
+.containerContact{
+    font-size: 30px;
+    text-align: center;
+    margin: 3% 30% 0 30%;
+    border: 3px solid green;
+    padding: 4px;
+    border-radius: 18px;
 }
