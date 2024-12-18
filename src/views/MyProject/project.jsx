@@ -21,7 +21,7 @@ function App() {
         <div className="card m-5" style={{ width: '45rem', height: "100%", border:'3px solid green', background:'black' }}>
           <h5 className="card-title" style={{textAlign:'center', margin:'2%', color:'white', fontSize:'2rem'}}>Api rest</h5>
           <div className="card-body cardBody">
-            <a href="https://pf-ecommerce2024.vercel.app/home"> <img src={swagger} className="card-img-top imgProjetc" alt="..." style={{height:'100%'}}/> </a>
+            <a href="https://ecommerce-00vc.onrender.com/API"> <img src={swagger} className="card-img-top imgProjetc" alt="..." style={{height:'100%'}}/> </a>
           </div>
         </div>
       </div>  
