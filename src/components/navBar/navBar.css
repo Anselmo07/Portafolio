@@ -13,6 +13,7 @@
 .NavBar ul {
     display: flex;
     list-style: none;
+    text-decoration: none;
     margin: 0;
     padding: 0;
 }
@@ -22,8 +23,20 @@
     color: white;
     font-size: 18px;
     cursor: pointer;
+    list-style: none;
+    text-decoration: none;
 }
 
 .NavBar li:hover {
     color: whitesmoke;
+}
+
+.NavBar li a{
+    margin-left: 20px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    color: white;
 }

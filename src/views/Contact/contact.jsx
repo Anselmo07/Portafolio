@@ -4,7 +4,7 @@ import './contact.css' // Asegúrate de que Bootstrap esté importado
 
 const Contact = () => {
     return (
-        <div className='contact'> 
+        <div className='contact' id="contact"> 
             <h2>Contactame</h2>
                 <div className='containerContact'>
                     <p>📩</p>

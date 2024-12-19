@@ -5,9 +5,9 @@ import swagger from "../.././assets/SWAGGER.png"
 import cybergames from "../.././assets/cybergames.png"
 import './projetc.css'
 
-function App() {
+function Project() {
   return (
-    <div>
+    <div id="project" className="project">
       <h2 className='text-center' style={{ margin: ' 7% 0 3% 0',
     fontSize: '60px'}}> Proyectos</h2>
       
@@ -30,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default Project;
