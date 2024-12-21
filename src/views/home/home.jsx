@@ -23,7 +23,7 @@ const Home = () => {
     }, []);
 
     return (
-        <section className="home">
+        <section className="home" id="home">
             <h2>
                 Hola! soy <span className="name">Anselmo</span>
             </h2>

@@ -7,6 +7,7 @@ import Project from './views/MyProject/project'
 import Contact from './views/Contact/contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+import Footer from './components/footer/footer';
 // import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         <Skills />
         <Project />
         <Contact />
-      </div>
+        <Footer/>
+    </div>
   )
 }
 
