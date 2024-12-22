@@ -3,7 +3,6 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    /* border-top: 2px solid green; */
     margin: 65px 0 0 0;
     width: 100%;
     background-color: #131313;
@@ -13,6 +12,8 @@
 .footer h2{
     font-size: 29px;
     font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    opacity: .5;
 }
 
 .cotainer{

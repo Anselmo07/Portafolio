@@ -15,6 +15,10 @@ body {
 /* Estilos básicos para encabezados */
 h1, h2, h3, h4, h5, h6 {
     margin: 0; /* Elimina el margen predeterminado */
+    font-size: 2rem; /* Tamaño base de fuente */
+    word-wrap: break-word; /* Para que el texto se ajuste si es muy largo */
+    overflow-wrap: break-word; /* Asegura que el texto se ajuste al contenedor */
+    white-space: normal; 
 }
 
 /* Asegura que los enlaces tengan un aspecto consistente */
@@ -37,5 +41,31 @@ button {
 /* Sombra interior para el cuerpo */
 body {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra interna */
-    
+    font-size: 1rem;
+
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (por ejemplo, móviles muy pequeños) */
+@media (max-width: 480px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .home h3 {
+        font-size: 1.5rem; /* Tamaño más pequeño para pantallas pequeñas */
+    }
 }

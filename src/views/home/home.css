@@ -1,20 +1,21 @@
-.home{
-    margin:  2% 20% 0 20%;
+.home {
+    margin: 2% 20% 0 20%;
     border-bottom: 1px solid black;
+    overflow: hidden; /* Evitar que el texto se desborde fuera del contenedor */
 }
-.home h2{
+
+.home h2 {
     font-size: 76px;
     margin: 0 5px 30px 0;
 }
 
-.home h3{
+.home h3 {
     font-size: 50px;
 }
 
-.name{
+.name {
     color: greenyellow;
 }
-
 
 .letra-por-letra {
     color: green;
@@ -26,7 +27,7 @@
     white-space: nowrap;
 }
 
-.letra-por-letra::before{
+.letra-por-letra::before {
     content: "";
     width: 2px;
     height: auto;
@@ -36,26 +37,39 @@
     animation: titilar 0.7s steps(1) infinite;
 }
 
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .home {
+        margin: 2% 10% 0 10%; /* Reducir el margen para pantallas más pequeñas */
+    }
+    .home h2 {
+        font-size: 36px; /* Ajustar el tamaño del título en pantallas pequeñas */
+    }
+    .home h3 {
+        font-size: 28px; /* Ajustar el tamaño del h3 en pantallas pequeñas */
+    }
+    .letra-por-letra {
+        animation: text 2.5s forwards steps(8); /* Reducir pasos en pantallas pequeñas */
+    }
+}
+
 @keyframes text {
-    from{
+    from {
         width: 0%;
     }
-
-    to{
+    to {
         width: 100%;
     }
 }
 
 @keyframes titilar {
-    from{
+    from {
         opacity: 0;
     }
-
-    50%{
+    50% {
         opacity: 1;
     }
-
-    100%{
+    100% {
         opacity: 0;
     }
 }

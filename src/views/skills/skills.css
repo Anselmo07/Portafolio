@@ -5,7 +5,6 @@
 
 .skills {
     margin: 2% 20% 0 20%;
-    border-bottom: 1px solid black;
 }
 
 .card{
@@ -14,6 +13,8 @@
     background-color: black;
     margin: 1.7rem;
     padding: 0;
+    width: 8rem;
+    ;
 }
 
 .card img {
@@ -29,4 +30,18 @@
 .card-img-top {
     border: none;
     background-color: black;
+}
+
+@media (max-width: 768px){
+    .titleSkill{
+        font-size: 40px;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        margin: 1rem; /* Espacio adicional entre las tarjetas */
+    }
 }
