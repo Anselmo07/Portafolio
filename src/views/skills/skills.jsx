@@ -12,7 +12,7 @@ import postman from "../../assets/Postman.jpg";
 import jira from "../../assets/jira.png";
 import react from "../../assets/react.png";
 import nextjs from "../../assets/nextjs.png";
-import mongoDb from "../../assets/mongoDb.png";
+import mongoDb from "../../assets/mongoDB.png";
 
 import "./skills.css";
 
