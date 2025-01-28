@@ -13,3 +13,8 @@
     border-radius: 18px;
     word-wrap: break-word;
 }
+
+.containerContact a{
+    text-decoration: none;
+    color: white;
+}

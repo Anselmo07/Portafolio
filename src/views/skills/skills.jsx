@@ -53,7 +53,7 @@ const Skills = () => {
                         <img src={PostgresSQL} alt="API" />
                     </div>
                     <div className="card mb-3 border border-0" >
-                        <img src={jira} alt="Cloudinary" />
+                        <img src={jira} alt="Jira" />
                     </div>
                 </div>
 

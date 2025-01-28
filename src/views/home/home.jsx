@@ -5,20 +5,16 @@ const Home = () => {
     useEffect(() => {
         const elements = document.querySelectorAll(".letra-por-letra");
 
-        elements.forEach((element) => {
-            // Reiniciar animación cuando termine
-            element.addEventListener("animationend", () => {
-                element.classList.remove("letra-por-letra");
-                void element.offsetWidth; // Reflow para reiniciar la animación
-                element.classList.add("letra-por-letra");
-            });
-        });
+        const handleAnimationEnd = (event) => {
+            event.target.classList.remove("letra-por-letra");
+            void event.target.offsetWidth;
+            event.target.classList.add("letra-por-letra");
+        };
 
-        // Limpieza del evento al desmontar el componente
+        elements.forEach(element => element.addEventListener("animationend", handleAnimationEnd));
+
         return () => {
-            elements.forEach((element) => {
-                element.removeEventListener("animationend", () => {});
-            });
+            elements.forEach(element => element.removeEventListener("animationend", handleAnimationEnd));
         };
     }, []);
 
