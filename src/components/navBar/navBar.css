@@ -1,20 +1,20 @@
 .NavBar {
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro */
-    position: sticky; /* Pegado al hacer scroll */
-    top: 0; /* Siempre arriba */
-    z-index: 1000; /* Por encima de otros elementos */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
     display: flex;
-    justify-content: center; /* Centra el contenedor horizontalmente */
+    justify-content: center;
     margin: 5px 0 10px 0;
 }
 
 .NavBar .container {
-    width: 60%; /* 60% del ancho total, dejando 20% a cada lado */
+    width: 60%;
     display: flex;
-    justify-content: flex-end; /* Alinea los elementos a la derecha del contenedor */
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 10px 0; /* Espaciado interno vertical */
+    justify-content: flex-end;
+    align-items: center; 
+    padding: 10px 0;
 }
 
 .NavBar h1 {

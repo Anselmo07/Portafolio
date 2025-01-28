@@ -1,7 +1,7 @@
 .home {
     margin: 2% 20% 0 20%;
     border-bottom: 1px solid black;
-    overflow: hidden; /* Evitar que el texto se desborde fuera del contenedor */
+    overflow: hidden;
 }
 
 .home h2 {
@@ -37,19 +37,19 @@
     animation: titilar 0.7s steps(1) infinite;
 }
 
-/* Media query para pantallas pequeñas */
+
 @media (max-width: 768px) {
     .home {
-        margin: 2% 10% 0 10%; /* Reducir el margen para pantallas más pequeñas */
+        margin: 2% 10% 0 10%;
     }
     .home h2 {
-        font-size: 36px; /* Ajustar el tamaño del título en pantallas pequeñas */
+        font-size: 36px;
     }
     .home h3 {
-        font-size: 28px; /* Ajustar el tamaño del h3 en pantallas pequeñas */
+        font-size: 28px;
     }
     .letra-por-letra {
-        animation: text 2.5s forwards steps(8); /* Reducir pasos en pantallas pequeñas */
+        animation: text 2.5s forwards steps(8);
     }
 }
 

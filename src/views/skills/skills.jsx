@@ -86,6 +86,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-
-// NodeJS - NestJS - TypeScript - Cloudinary - PostgresSQL - GITHUB - Apis

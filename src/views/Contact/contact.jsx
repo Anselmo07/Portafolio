@@ -1,6 +1,6 @@
 // import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './contact.css' // Asegúrate de que Bootstrap esté importado
+import './contact.css'
 
 const Contact = () => {
     return (
