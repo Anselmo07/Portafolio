@@ -7,24 +7,25 @@
     margin: 2% 20% 0 20%;
 }
 
-.card{
+.cardSkill{
     border: none;
     box-shadow: none;
     background-color: black;
-    margin: 1.7rem;
+    margin: 5rem;
     padding: 0;
     width: 8rem;
-    ;
+    border: 1px solid red;
 }
 
-.card img {
-    width: 100%;
-    height: 100%;
+.cardSkill img {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     background-color: black;
     border: none;
     display: block;
     border: none;
+    object-fit: contain;
 }
 
 .card-img-top {
@@ -32,16 +33,37 @@
     background-color: black;
 }
 
-@media (max-width: 768px){
-    .titleSkill{
+@media (max-width: 768px) {
+    .titleSkill {
         font-size: 40px;
+        margin: 5%;
     }
 
     .skills {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
-    .card {
+    .cardSkill {
+        width: 5rem;
+    }
+
+    .cardSkill img {
+        max-width: 90px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .titleSkill {
+        font-size: 30px;
+    }
+
+    .cardSkill {
+        width: auto;
         margin: 1rem;
+    }
+
+    .cardSkill img {
+        max-width: 80px;
     }
 }

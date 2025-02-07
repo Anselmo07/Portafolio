@@ -1,5 +1,6 @@
 .home {
-    margin: 2% 20% 0 20%;
+    margin: 2% auto;
+    max-width: 80%;
     border-bottom: 1px solid black;
     overflow: hidden;
 }
@@ -37,39 +38,45 @@
     animation: titilar 0.7s steps(1) infinite;
 }
 
-
 @media (max-width: 768px) {
     .home {
-        margin: 2% 10% 0 10%;
+        max-width: 90%;
     }
+
     .home h2 {
         font-size: 36px;
     }
+
     .home h3 {
         font-size: 28px;
     }
+
     .letra-por-letra {
         animation: text 2.5s forwards steps(8);
     }
 }
 
-@keyframes text {
-    from {
-        width: 0%;
+@media (max-width: 480px) {
+    .home h2 {
+        font-size: 28px;
     }
-    to {
-        width: 100%;
+
+    .home h3 {
+        font-size: 22px;
+    }
+
+    .letra-por-letra {
+        letter-spacing: 2px;
     }
 }
 
+@keyframes text {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
 @keyframes titilar {
-    from {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+    from { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }

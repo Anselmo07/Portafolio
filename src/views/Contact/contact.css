@@ -1,20 +1,43 @@
-.contact h2{
+.contact h2 {
     font-size: 60px;
     text-align: center;
     margin: 6% 0 4% 0;
 }
 
-.containerContact{
+.containerContact {
     font-size: 30px;
     text-align: center;
-    margin: 3% 30% 0 30%;
+    margin: 3% auto;
+    max-width: 50%;
     border: 3px solid green;
-    padding: 4px;
+    padding: 10px;
     border-radius: 18px;
     word-wrap: break-word;
 }
 
-.containerContact a{
+.containerContact a {
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 40px;
+    }
+    
+    .containerContact {
+        font-size: 20px;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    .containerContact {
+        font-size: 18px;
+        max-width: 90%;
+    }
 }

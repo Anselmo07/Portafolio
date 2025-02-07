@@ -1,20 +1,35 @@
-.about{
+.about {
     text-align: initial;
     font-size: 23px;
-    margin:  2% 20% 0 20%;
+    margin: 2% auto;
+    max-width: 80%;
     border-bottom: 1px solid black;
 }
 
-.aboutText{
+.aboutText {
     text-align: initial;
     margin-bottom: 5%;
 }
 
-.curriculm{
+.curriculm {
     text-decoration: none;
-    text-decoration-line: none;
     border: 1px solid green;
     border-radius: 13px;
     color: green;
     padding: 1%;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .about {
+        font-size: 18px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        font-size: 16px;
+        max-width: 95%;
+    }
 }

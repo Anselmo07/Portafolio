@@ -8,7 +8,7 @@ const Contact = () => {
             <h2>Contactame</h2>
                 <div className='containerContact'>
                     <p>📩</p>
-                    <a href="mailto:anselmo.vecchio.jose@gmail.com">anselmo.vecchio.jose@gmail.com</a>
+                    <a href="anselmo.vecchio.jose@gmail.com@gmail.com" target="_blank" rel="noopener noreferrer">anselmo.vecchio.jose@gmail.com</a>
                     <p style={{color:'green'}}>Enviar mensaje</p>
                 </div>
             
@@ -17,4 +17,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
