@@ -14,9 +14,8 @@ const Footer = () => {
                     <img src={git} alt="Repositorio de GitHub de Anselmo Vecchio" />
                 </a>
             </div>
-            <div>
-                <h2>ANSELMO VECCHIO</h2>
-                <p>&copy; {new Date().getFullYear()} Todos los derechos reservados</p>
+            <div className="footerP">
+                <p>Anselmo Vecchio &copy; {new Date().getFullYear()} Todos los derechos reservados.</p>
             </div>
         </footer>
     )
