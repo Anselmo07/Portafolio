@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import swagger from "../.././assets/SWAGGER.png"
 import cybergames from "../.././assets/cybergames.png"
 import chatbot from "../.././assets/chatbot.png"
+import calculator from "../.././assets/calculator.png"
 import './projetc.css'
 
 function Project() {
@@ -11,6 +12,13 @@ function Project() {
     fontSize: '60px'}}> Proyectos</h2>
       
       <div className="d-flex justify-content-center flex-wrap cardContainer">
+      
+      <div className="card m-5" style={{ width: '45rem', height: "100%", border:'3px solid green', background:'black' }}>
+          <h5 className="card-title" style={{textAlign:'center', margin:'2%', color:'white', fontSize:'2rem'}}>Calculadora</h5>
+          <div className="card-body cardBody">
+            <a href="https://calculator-five-indol.vercel.app/calculator"> <img src={calculator} className="card-img-top imgProjetc" alt="calculator" style={{height:'100%'}}/> </a>
+          </div>
+        </div>
       <div className="card m-5" style={{ width: '45rem', height: "100%", border:'3px solid green', background:'black' }}>
           <h5 className="card-title" style={{textAlign:'center', margin:'2%', color:'white', fontSize:'2rem'}}>Chatbot</h5>
           <div className="card-body cardBody">
