@@ -106,6 +106,21 @@ function Project() {
               />{" "}
             </a>
           </div>
+          <div className="InfoMore">
+            <span className="InfoMoreTittle">Mas informacion</span>
+            <button className="InfoMoreButton"
+              onClick={() => setMostrarInfo(!mostrarInfo)}
+            >
+              {mostrarInfo ? "-" : "+"}
+            </button>
+          </div>
+          {mostrarInfo && (
+            <div className="InfoMoreDescription">
+              <p>
+                Este es un proyecto de chatbot interactivo para un restaurante de sushi, donde los usuarios pueden consultar el menú, realizar pedidos y obtener información sobre el restaurante de forma automática.
+              </p>
+            </div>
+          )}
         </div>
 
         <div
@@ -136,10 +151,37 @@ function Project() {
                 src={movies}
                 className="card-img-top imgProjetc"
                 alt="movies"
-                style={{ height: "100%" }}
+                style={{ height: "18rem" }}
               />{" "}
             </a>
           </div>
+          <div className="InfoMore">
+            <span className="InfoMoreTittle">Mas informacion</span>
+            <button className="InfoMoreButton"
+              onClick={() => setMostrarInfo(!mostrarInfo)}
+            >
+              {mostrarInfo ? "-" : "+"}
+            </button>
+          </div>
+          {mostrarInfo && (
+            <div className="InfoMoreDescription">
+              <p>
+                Este proyecto es una aplicación web desarrollada en JavaScript que permite explorar un catálogo de películas de manera organizada e intuitiva. La plataforma ofrece información detallada de cada título, incluyendo: <br /> <br />
+
+⭐ Valoración <br />
+
+📝 Descripción <br />
+
+⏱️ Duración <br />
+
+🎬 Director <br />
+
+🎭 Género <br /> <br />
+
+Además, cuenta con una sección dedicada a las películas próximas a estrenarse, lo que brinda una experiencia completa para quienes buscan mantenerse informados sobre novedades del cine.
+              </p>
+            </div>
+          )}
         </div>
 
         <div
@@ -174,6 +216,21 @@ function Project() {
               />{" "}
             </a>
           </div>
+          <div className="InfoMore">
+            <span className="InfoMoreTittle">Mas informacion</span>
+            <button className="InfoMoreButton"
+              onClick={() => setMostrarInfo(!mostrarInfo)}
+            >
+              {mostrarInfo ? "-" : "+"}
+            </button>
+          </div>
+          {mostrarInfo && (
+            <div className="InfoMoreDescription">
+              <p>
+                Esta calculadora te permite realizar operaciones simples como sumar, restar, dividir y multiplicar.
+              </p>
+            </div>
+          )}
         </div>
 
         <div
@@ -208,6 +265,21 @@ function Project() {
               />{" "}
             </a>
           </div>
+          <div className="InfoMore">
+            <span className="InfoMoreTittle">Mas informacion</span>
+            <button className="InfoMoreButton"
+              onClick={() => setMostrarInfo(!mostrarInfo)}
+            >
+              {mostrarInfo ? "-" : "+"}
+            </button>
+          </div>
+          {mostrarInfo && (
+            <div className="InfoMoreDescription">
+              <p>
+                Este e-commerce de dispositivos electrónicos, desarrollado en backend con NestJS y PostgreSQL, está diseñado para permitir a los usuarios visualizar y adquirir productos, como celulares, tablets y computadoras, mediante la creación de una cuenta de usuario.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
