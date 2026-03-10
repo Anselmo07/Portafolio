@@ -13,9 +13,10 @@
 
 .curriculm {
     text-decoration: none;
-    border: 1px solid green;
+    border: 2px solid green;
     border-radius: 13px;
-    color: green;
+    color: black;
+    background-color: greenyellow;
     padding: 1%;
     display: inline-block;
 }

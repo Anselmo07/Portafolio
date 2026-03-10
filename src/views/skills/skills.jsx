@@ -13,6 +13,7 @@ import jira from "../../assets/jira.png";
 import react from "../../assets/react.png";
 import nextjs from "../../assets/nextjs.png";
 import mongoDb from "../../assets/mongoDB.png";
+import figma from "../../assets/figma.png";
 
 import "./skills.css";
 
@@ -31,29 +32,24 @@ const Skills = () => {
                     <div className="card mb-3 border border-0 cardSkill" >
                         <img src={node} alt="Node.js" />
                     </div>
-                </div>
-
-                <div className="d-flex flex-row align-items-center m-3">
                     <div className="card mb-3 border border-0 cardSkill" >
                         <img src={es6} alt="ES6" />
                     </div>
+                </div>
+
+                <div className="d-flex flex-row align-items-center m-3">
+                    
                     <div className="card mb-3 border border-0 cardSkill" >
                         <img src={html} alt="HTML" />
                     </div>
                     <div className="card mb-3 border border-0 cardSkill" >
                         <img src={css} alt="CSS" />
                     </div>
-                </div>
-
-                <div className="d-flex flex-row align-items-center m-3">
                     <div className="card mb-3 border border-0 cardSkill" >
                         <img src={git} alt="Git" />
                     </div>
                     <div className="card mb-3 border border-0 cardSkill" >
                         <img src={PostgresSQL} alt="API" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={jira} alt="Jira" />
                     </div>
                 </div>
 
@@ -67,6 +63,9 @@ const Skills = () => {
                     <div className="card mb-3 border border-0 cardSkill" >
                         <img src={cloudinary} alt="Cloudinary" />
                     </div>
+                    <div className="card mb-3 border border-0 cardSkill" >
+                        <img src={jira} alt="Jira" />
+                    </div>
                 </div>
 
                 <div className="d-flex flex-row align-items-center m-3">
@@ -78,6 +77,9 @@ const Skills = () => {
                     </div>
                     <div className="card mb-3 border border-0 cardSkill" >
                         <img src={mongoDb} alt="mongoDb" />
+                    </div>
+                    <div className="card mb-3 border border-0 cardSkill" >
+                        <img src={figma} alt="figma" />
                     </div>
                 </div>
             </div>
