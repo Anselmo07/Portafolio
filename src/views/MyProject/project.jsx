@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import swagger from "../.././assets/SWAGGER.png";
 // import cybergames from "../.././assets/cybergames.png"
 import cdlRecruiter from "../.././assets/cdlrecruiterPorfolio.png";
+import ecommerce from "../.././assets/ecommerce.png"
 import chatbot from "../.././assets/chatbot.png";
 import calculator from "../.././assets/calculator.png";
 import movies from "../.././assets/pelis.png";
@@ -69,6 +70,61 @@ function Project() {
                 CDL Recruiter es una plataforma web para optimizar el reclutamiento 
                 de conductores con licencia comercial (CDL). Se enfoca en mejorar la experiencia de usuario y 
                 automatizar el proceso de selección para empresas de transporte.
+              </p>
+            </div>
+          )}
+        </div>
+
+        <div
+          className="card m-5"
+          style={{
+            width: "45rem",
+            height: "100%",
+            border: "3px solid green",
+            borderRadius: "3%",
+            background: "black",
+          }}
+        >
+          <h5
+            className="card-title"
+            style={{
+              textAlign: "center",
+              margin: "2%",
+              color: "white",
+              fontSize: "2rem",
+            }}
+          >
+            E-commerce
+          </h5>
+          <div className="card-body cardBody">
+            <a href="https://store-jade-five.vercel.app">
+              {" "}
+              <img
+                src={ecommerce}
+                className="card-img-top imgProjetc"
+                alt="ecommerce"
+                style={{ height: "100%" }}
+              />{" "}
+            </a>
+          </div>
+          <div className="InfoMore">
+            <span className="InfoMoreTittle">Mas informacion</span>
+            <button className="InfoMoreButton"
+              onClick={() => setMostrarInfo(!mostrarInfo)}
+            >
+              {mostrarInfo ? "-" : "+"}
+            </button>
+          </div>
+          {mostrarInfo && (
+            <div className="InfoMoreDescription">
+              <p>
+                Free Market – Compra fácil, rápida y sin complicaciones <br /> <br />
+
+Free Market es una aplicación web de comercio electrónico diseñada para ofrecer una experiencia de compra simple, rápida y atractiva. Los usuarios pueden explorar productos, buscarlos fácilmente y agregarlos a su carrito en tiempo real, sin necesidad de registrarse o iniciar sesión. <br /> <br />
+
+Con una interfaz moderna y una navegación fluida, la plataforma permite descubrir productos y gestionar el carrito de forma dinámica, brindando una experiencia cómoda y accesible para cualquier visitante. <br /> <br />
+ 
+Explora, descubre y arma tu carrito en segundos.
               </p>
             </div>
           )}
