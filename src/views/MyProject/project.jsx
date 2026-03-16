@@ -207,7 +207,7 @@ Explora, descubre y arma tu carrito en segundos.
                 src={movies}
                 className="card-img-top imgProjetc"
                 alt="movies"
-                style={{ height: "18rem" }}
+                style={{ height: "22rem" }}
               />{" "}
             </a>
           </div>
@@ -268,7 +268,7 @@ Además, cuenta con una sección dedicada a las películas próximas a estrenars
                 src={calculator}
                 className="card-img-top imgProjetc"
                 alt="calculator"
-                style={{ height: "100%" }}
+                style={{ height: "22rem" }}
               />{" "}
             </a>
           </div>
