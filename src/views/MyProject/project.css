@@ -1,0 +1,101 @@
+/* CONTENEDOR GENERAL */
+.project {
+  background: black;
+  padding-bottom: 4rem;
+}
+
+/* TITULO */
+.projectTitle {
+  text-align: center;
+  margin: 7% 0 3% 0;
+  font-size: 60px;
+  color: white;
+}
+
+/* GRID DE CARDS */
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👈 2 por fila */
+  gap: 2rem;
+  padding: 0 5%;
+}
+
+/* CARD */
+.card {
+  border: 3px solid green;
+  border-radius: 12px;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* HOVER */
+.card:hover {
+  border: 2px solid red;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* TITULO */
+.cardTitle {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* CONTENEDOR VERDE DE IMAGEN */
+.cardBody {
+  background: green;
+  padding: 1rem;
+}
+
+/* IMAGEN */
+.imgProject {
+  width: 100%;
+  height: 250px;
+  object-fit: contain; /* 👈 muestra imagen completa */
+  background: black;   /* relleno si sobra espacio */
+  border-radius: 8px;
+}
+
+/* INFO MORE */
+.InfoMore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.InfoMoreTittle {
+  color: white;
+}
+
+.InfoMoreButton {
+  color: white;
+  background: green;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.InfoMoreButton:hover {
+  background: darkgreen;
+}
+
+/* DESCRIPCION */
+.InfoMoreDescription {
+  background: black;
+  color: white;
+  padding: 1.5rem;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cardContainer {
+    grid-template-columns: 1fr; /* 👈 1 por fila en mobile */
+  }
+}
