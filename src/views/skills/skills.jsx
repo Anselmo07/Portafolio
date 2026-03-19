@@ -1,13 +1,16 @@
+import "./skills.css";
+
+// imágenes
 import ts from "../../assets/typescript.png";
 import api from "../../assets/api.png";
 import git from "../../assets/Github.png";
-import Nest from "../../assets/nestjs.png";
+import nest from "../../assets/nestjs.png";
 import node from "../../assets/nodejs.png";
 import cloudinary from "../../assets/cloudinary.png";
 import es6 from "../../assets/js.png";
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
-import PostgresSQL from "../../assets/Postgresql.png";
+import postgres from "../../assets/Postgresql.png";
 import postman from "../../assets/Postman.jpg";
 import jira from "../../assets/jira.png";
 import react from "../../assets/react.png";
@@ -15,76 +18,39 @@ import nextjs from "../../assets/nextjs.png";
 import mongoDb from "../../assets/mongoDB.png";
 import figma from "../../assets/figma.png";
 
-import "./skills.css";
+const skills = [
+  { img: ts, name: "TypeScript" },
+  { img: nest, name: "NestJS" },
+  { img: node, name: "Node.js" },
+  { img: es6, name: "JavaScript" },
+  { img: html, name: "HTML" },
+  { img: css, name: "CSS" },
+  { img: git, name: "Git" },
+  { img: postgres, name: "PostgreSQL" },
+  { img: postman, name: "Postman" },
+  { img: api, name: "API" },
+  { img: cloudinary, name: "Cloudinary" },
+  { img: jira, name: "Jira" },
+  { img: react, name: "React" },
+  { img: nextjs, name: "Next.js" },
+  { img: mongoDb, name: "MongoDB" },
+  { img: figma, name: "Figma" },
+];
 
 const Skills = () => {
-    return (
-        <div className="skills">
-            <h2 className='text-center titleSkill'>Habilidades</h2>
-            <div className="d-flex justify-content-center flex-wrap">
-                <div className="d-flex flex-row align-items-center m-3">
-                    <div className="card mb-3 border border-0 cardSkill">
-                        <img src={ts} alt="TypeScript" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill">
-                        <img src={Nest} alt="NestJS" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={node} alt="Node.js" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={es6} alt="ES6" />
-                    </div>
-                </div>
+  return (
+    <div className="skills">
+      <h2 className="titleSkill">Habilidades</h2>
 
-                <div className="d-flex flex-row align-items-center m-3">
-                    
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={html} alt="HTML" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={css} alt="CSS" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={git} alt="Git" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={PostgresSQL} alt="API" />
-                    </div>
-                </div>
-
-                <div className="d-flex flex-row align-items-center m-3 cardTwo">
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={postman} alt="Git" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={api} alt="API" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={cloudinary} alt="Cloudinary" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={jira} alt="Jira" />
-                    </div>
-                </div>
-
-                <div className="d-flex flex-row align-items-center m-3">
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={react} alt="react" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={nextjs} alt="nextjs" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={mongoDb} alt="mongoDb" />
-                    </div>
-                    <div className="card mb-3 border border-0 cardSkill" >
-                        <img src={figma} alt="figma" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+      <div className="skillsGrid">
+        {skills.map((skill, index) => (
+          <div key={index} className="cardSkill">
+            <img src={skill.img} alt={skill.name} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Skills;

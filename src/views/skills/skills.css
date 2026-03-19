@@ -1,69 +1,49 @@
-.titleSkill{
-    margin: 8%;
-    font-size: 60px;
-}
-
 .skills {
-    margin: 2% 20% 0 20%;
+  padding: 3rem 0 0 0;
 }
 
-.cardSkill{
-    border: none;
-    box-shadow: none;
-    background-color: black;
-    margin: 5rem;
-    padding: 0;
-    width: 8rem;
-    border: 1px solid red;
+.titleSkill {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
 }
 
+/* GRID MODERNO */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0 10%;
+}
+
+/* CARD */
+.cardSkill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: black;
+  /* border: 2px solid green; */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.cardSkill:hover {
+  transform: scale(1.1);
+  border-color: red;
+}
+
+/* IMG */
 .cardSkill img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    background-color: black;
-    border: none;
-    display: block;
-    border: none;
-    object-fit: contain;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
-.card-img-top {
-    border: none;
-    background-color: black;
-}
-
-@media (max-width: 768px) {
-    .titleSkill {
-        font-size: 40px;
-        margin: 5%;
-    }
-
-    .skills {
-        gap: 10px;
-    }
-
-    .cardSkill {
-        width: 5rem;
-    }
-
-    .cardSkill img {
-        max-width: 90px;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .titleSkill {
-        font-size: 30px;
-    }
-
-    .cardSkill {
-        width: auto;
-        margin: 1rem;
-    }
-
-    .cardSkill img {
-        max-width: 80px;
-    }
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
