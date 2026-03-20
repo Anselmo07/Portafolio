@@ -1,6 +1,6 @@
 import { useState } from "react";
 import projects from "./projects.js";
-import "./Project.css";
+import "./project.css";
 
 // imágenes
 import cdlRecruiter from "../../assets/cdlrecruiterPorfolio.png";
