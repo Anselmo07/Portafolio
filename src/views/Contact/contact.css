@@ -1,43 +1,94 @@
-.contact h2 {
-    font-size: 60px;
-    text-align: center;
-    margin: 6% 0 4% 0;
+/* CONTENEDOR */
+.contact {
+  background: black;
+  padding: 6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.containerContact {
-    font-size: 30px;
-    text-align: center;
-    margin: 3% auto;
-    max-width: 50%;
-    border: 3px solid green;
-    padding: 10px;
-    border-radius: 18px;
-    word-wrap: break-word;
+/* TITULO */
+.contactTitle {
+  font-size: 60px;
+  color: white;
+  margin-bottom: 2rem;
 }
 
-.containerContact a {
-    text-decoration: none;
-    color: white;
+.contactSubtitle {
+  font-size: 20px;
+  color: #aaa;
+  margin-bottom: 3rem;
 }
 
+/* TARJETA */
+.contactCard {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  border: 2px solid green;
+  border-radius: 20px;
+  background: #0a0a0a;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.contactCard:hover {
+  border-color: red;
+  transform: scale(1.02);
+}
+
+/* INPUTS */
+.contactCard input,
+.contactCard textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: black;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+/* FOCUS */
+.contactCard input:focus,
+.contactCard textarea:focus {
+  border-color: green;
+}
+
+/* TEXTAREA */
+.contactCard textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* BOTON */
+.contactCard button {
+  padding: 0.9rem;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER BOTON */
+.contactCard button:hover {
+  background: darkgreen;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .contact h2 {
-        font-size: 40px;
-    }
-    
-    .containerContact {
-        font-size: 20px;
-        max-width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact h2 {
-        font-size: 30px;
-    }
-
-    .containerContact {
-        font-size: 18px;
-        max-width: 90%;
-    }
+  .contactTitle {
+    font-size: 40px;
+  }
 }
