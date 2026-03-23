@@ -21,6 +21,25 @@
     display: inline-block;
 }
 
+.langToggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.langToggle button {
+  background: green;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.langToggle button:hover {
+  background: darkgreen;
+}
+
 @media (max-width: 768px) {
     .about {
         font-size: 18px;

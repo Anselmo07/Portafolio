@@ -1,17 +1,37 @@
-import "./navBar.css"
+import "./navBar.css";
+import { useLanguage } from "../../context/languageContext";
 
 const NavBar = () => {
-    return(
-        <nav className="NavBar">
-            <div className="container">
-                <ul>
-                    <li><a href="#home" aria-label="Ir a la sección de inicio">Inicio</a></li>
-                    <li><a href="#project" aria-label="Ir a la sección de proyectos">Proyectos</a></li>
-                    <li><a href="#contact" aria-label="Ir a la sección de contacto">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-    );
+  const { lang, toggleLang } = useLanguage();
+
+  return (
+    <nav className="NavBar">
+      <div className="container">
+        <ul>
+          <li>
+            <a href="#home">
+              {lang === "es" ? "Inicio" : "Home"}
+            </a>
+          </li>
+          <li>
+            <a href="#project">
+              {lang === "es" ? "Proyectos" : "Projects"}
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              {lang === "es" ? "Contacto" : "Contact"}
+            </a>
+          </li>
+        </ul>
+
+        {/* BOTON IDIOMA */}
+        <button className="langBtn" onClick={toggleLang}>
+          {lang === "es" ? "EN" : "ES"}
+        </button>
+      </div>
+    </nav>
+  );
 };
 
 export default NavBar;

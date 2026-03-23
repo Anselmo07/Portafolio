@@ -53,6 +53,20 @@
     color: white;
 }
 
+.langBtn {
+  margin-left: 20px;
+  background: green;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.langBtn:hover {
+  background: darkgreen;
+}
+
 
 @media (max-width: 480px) {
     .NavBar {
