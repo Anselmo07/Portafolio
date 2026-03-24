@@ -1,5 +1,6 @@
 import { useState } from "react";
 import projects from "./projects.js";
+import { useLanguage } from "../../context/languageContext";
 import "./project.css";
 
 // imágenes
@@ -21,6 +22,7 @@ const images = {
 
 function Project() {
   const [openCard, setOpenCard] = useState(null);
+  const { lang } = useLanguage();
 
   const toggleCard = (id) => {
     setOpenCard(openCard === id ? null : id);
@@ -28,7 +30,9 @@ function Project() {
 
   return (
     <div id="project" className="project">
-      <h2 className="projectTitle">Mis proyectos</h2>
+      <h2 className="projectTitle">
+        {lang === "es" ? "Mis proyectos" : "My Projects"}
+      </h2>
 
       <div className="cardContainer">
         {projects.map((project) => (
@@ -46,7 +50,9 @@ function Project() {
             </div>
 
             <div className="InfoMore">
-              <span className="InfoMoreTittle">Mas informacion</span>
+              <span className="InfoMoreTittle">
+                {lang === "es" ? "Más información" : "More info"}
+              </span>
 
               <button
                 className="InfoMoreButton"
@@ -58,7 +64,7 @@ function Project() {
 
             {openCard === project.id && (
               <div className="InfoMoreDescription">
-                <p>{project.description}</p>
+                <p>{project.description[lang]}</p>
               </div>
             )}
           </div>

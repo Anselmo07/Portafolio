@@ -2,9 +2,8 @@ import "./about.css";
 import cv from "../../assets/AnselmoVecchio.CV.pdf";
 import { useLanguage } from "../../context/languageContext";
 
-// ✅ función edad automática (correcta)
 const getAge = () => {
-  const birthDate = new Date(2003, 4, 7); // 7 mayo
+  const birthDate = new Date(2003, 4, 7);
   const today = new Date();
 
   let age = today.getFullYear() - birthDate.getFullYear();
