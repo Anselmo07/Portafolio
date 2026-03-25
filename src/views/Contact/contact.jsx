@@ -1,14 +1,46 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useLanguage } from "../../context/languageContext";
 import "./contact.css";
 
 const Contact = () => {
+  const { lang } = useLanguage();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
     title: "",
     message: "",
   });
+
+  const text = {
+    es: {
+      title: "Contacto",
+      subtitle:
+        "¿Tenés una idea o proyecto en mente? Estoy disponible para trabajar juntos.",
+      namePlaceholder: "Nombre y Apellido",
+      emailPlaceholder: "Tu Email",
+      subjectPlaceholder: "Asunto",
+      messagePlaceholder: "Escribí tu mensaje...",
+      button: "Enviar mensaje",
+      success: "Mensaje enviado correctamente 🚀",
+      error: "Error al enviar el mensaje ❌",
+    },
+    en: {
+      title: "Contact",
+      subtitle:
+        "Do you have an idea or project in mind? I’m available to work together.",
+      namePlaceholder: "Full Name",
+      emailPlaceholder: "Your Email",
+      subjectPlaceholder: "Subject",
+      messagePlaceholder: "Write your message...",
+      button: "Send message",
+      success: "Message sent successfully 🚀",
+      error: "Error sending message ❌",
+    },
+  };
+
+  const currentText = text[lang];
 
   const handleChange = (e) => {
     setForm({
@@ -28,28 +60,25 @@ const Contact = () => {
         "1ljvOtWeW88UAQKqJ"
       )
       .then(() => {
-        alert("Mensaje enviado correctamente 🚀");
+        alert(currentText.success);
         setForm({ name: "", email: "", title: "", message: "" });
       })
       .catch(() => {
-        alert("Error al enviar el mensaje ❌");
+        alert(currentText.error);
       });
   };
 
   return (
     <section className="contact" id="contact">
-      <h2 className="contactTitle">Contacto</h2>
+      <h2 className="contactTitle">{currentText.title}</h2>
 
-      <p className="contactSubtitle">
-        ¿Tenés una idea o proyecto en mente? Estoy disponible para trabajar
-        juntos.
-      </p>
+      <p className="contactSubtitle">{currentText.subtitle}</p>
 
       <form className="contactCard" onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
-          placeholder="Nombre y Apellido"
+          placeholder={currentText.namePlaceholder}
           value={form.name}
           onChange={handleChange}
           required
@@ -58,7 +87,7 @@ const Contact = () => {
         <input
           type="email"
           name="email"
-          placeholder="Tu Email"
+          placeholder={currentText.emailPlaceholder}
           value={form.email}
           onChange={handleChange}
           required
@@ -67,7 +96,7 @@ const Contact = () => {
         <input
           type="text"
           name="title"
-          placeholder="Asunto"
+          placeholder={currentText.subjectPlaceholder}
           value={form.title}
           onChange={handleChange}
           required
@@ -75,13 +104,13 @@ const Contact = () => {
 
         <textarea
           name="message"
-          placeholder="Escribí tu mensaje..."
+          placeholder={currentText.messagePlaceholder}
           value={form.message}
           onChange={handleChange}
           required
         />
 
-        <button type="submit">Enviar mensaje</button>
+        <button type="submit">{currentText.button}</button>
       </form>
     </section>
   );

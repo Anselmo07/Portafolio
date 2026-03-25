@@ -1,31 +1,51 @@
 import { useEffect } from "react";
+import { useLanguage } from "../../context/languageContext";
 import "./home.css";
 
 const Home = () => {
-    useEffect(() => {
-        const elements = document.querySelectorAll(".letra-por-letra");
+  const { lang } = useLanguage();
 
-        const handleAnimationEnd = (event) => {
-            event.target.classList.remove("letra-por-letra");
-            void event.target.offsetWidth;
-            event.target.classList.add("letra-por-letra");
-        };
+  useEffect(() => {
+    const elements = document.querySelectorAll(".letra-por-letra");
 
-        elements.forEach(element => element.addEventListener("animationend", handleAnimationEnd));
+    const handleAnimationEnd = (event) => {
+      event.target.classList.remove("letra-por-letra");
+      void event.target.offsetWidth;
+      event.target.classList.add("letra-por-letra");
+    };
 
-        return () => {
-            elements.forEach(element => element.removeEventListener("animationend", handleAnimationEnd));
-        };
-    }, []);
-
-    return (
-        <section className="home" id="home">
-            <h2>
-                Hola! soy <span className="name">Anselmo</span>
-            </h2>
-            <h3 className="letra-por-letra">Desarrollador BACKEND</h3>
-        </section>
+    elements.forEach((element) =>
+      element.addEventListener("animationend", handleAnimationEnd)
     );
+
+    return () => {
+      elements.forEach((element) =>
+        element.removeEventListener("animationend", handleAnimationEnd)
+      );
+    };
+  }, [lang]); // 👈 importante para que al cambiar idioma vuelva la animación
+
+  const text = {
+    es: {
+      greeting: "Hola! soy",
+      role: "Desarrollador FULLSTACK",
+    },
+    en: {
+      greeting: "Hi! I'm",
+      role: "FULLSTACK Developer",
+    },
+  };
+
+  const currentText = text[lang];
+
+  return (
+    <section className="home" id="home">
+      <h2>
+        {currentText.greeting} <span className="name">Anselmo</span>
+      </h2>
+      <h3 className="letra-por-letra">{currentText.role}</h3>
+    </section>
+  );
 };
 
 export default Home;
