@@ -23,7 +23,7 @@ const Home = () => {
         element.removeEventListener("animationend", handleAnimationEnd)
       );
     };
-  }, [lang]); // 👈 importante para que al cambiar idioma vuelva la animación
+  }, [lang]);
 
   const text = {
     es: {

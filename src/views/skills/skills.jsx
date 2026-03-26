@@ -1,4 +1,5 @@
 import "./skills.css";
+import { useLanguage } from "../../context/languageContext";
 
 // imágenes
 import ts from "../../assets/typescript.png";
@@ -38,9 +39,21 @@ const skills = [
 ];
 
 const Skills = () => {
+  const { lang } = useLanguage();
+  
   return (
     <div className="skills">
-      <h2 className="titleSkill">Habilidades</h2>
+      <h2 className="titleSkill"> 
+        {lang === "es" ? (
+            <>
+              Habilidades
+            </>
+          ) : (
+            <>
+              Skills
+            </>
+        )}
+      </h2>
 
       <div className="skillsGrid">
         {skills.map((skill, index) => (

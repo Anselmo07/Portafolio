@@ -18,7 +18,8 @@ const Contact = () => {
       title: "Contacto",
       subtitle:
         "¿Tenés una idea o proyecto en mente? Estoy disponible para trabajar juntos.",
-      namePlaceholder: "Nombre y Apellido",
+      namePlaceholder: "Nombre",
+      surnamePlaceholder: "Apellido",
       emailPlaceholder: "Tu Email",
       subjectPlaceholder: "Asunto",
       messagePlaceholder: "Escribí tu mensaje...",
@@ -30,7 +31,8 @@ const Contact = () => {
       title: "Contact",
       subtitle:
         "Do you have an idea or project in mind? I’m available to work together.",
-      namePlaceholder: "Full Name",
+      namePlaceholder: "Name",
+      surnamePlaceholder: "Surname",
       emailPlaceholder: "Your Email",
       subjectPlaceholder: "Subject",
       messagePlaceholder: "Write your message...",
@@ -61,7 +63,7 @@ const Contact = () => {
       )
       .then(() => {
         alert(currentText.success);
-        setForm({ name: "", email: "", title: "", message: "" });
+        setForm({ name: "", surname: "", email: "", title: "", message: "" });
       })
       .catch(() => {
         alert(currentText.error);
@@ -80,6 +82,15 @@ const Contact = () => {
           name="name"
           placeholder={currentText.namePlaceholder}
           value={form.name}
+          onChange={handleChange}
+          required
+        />
+
+        <input
+          type="text"
+          name="surname"
+          placeholder={currentText.surnamePlaceholder}
+          value={form.surname}
           onChange={handleChange}
           required
         />

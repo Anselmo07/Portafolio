@@ -1,8 +1,10 @@
 import "./footer.css"
+import { useLanguage } from "../../context/languageContext";
 import linkedin from "../../assets/linkedin.png";
 import git from "../../assets/Github.png";
 
 const Footer = () => {
+    const { lang } = useLanguage();
 
     return(
         <footer className="footer">
@@ -15,7 +17,17 @@ const Footer = () => {
                 </a>
             </div>
             <div className="footerP">
-                <p>Anselmo Vecchio &copy; {new Date().getFullYear()} Todos los derechos reservados.</p>
+                <p> 
+                    {lang === "es" ? ( 
+                        <>
+                            Anselmo Vecchio &copy; {new Date().getFullYear()} Todos los derechos reservados. 
+                        </>
+                    ) : (
+                        <> 
+                            Anselmo Vecchio &copy; {new Date().getFullYear()}
+                        </>
+                    )}
+                </p>
             </div>
         </footer>
     )
