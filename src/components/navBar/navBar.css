@@ -1,99 +1,246 @@
 .NavBar {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: sticky; 
-    top: 0; 
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    margin: 5px 0 10px 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0 10px 0;
+  backdrop-filter: blur(8px);
 }
 
 .NavBar .container {
-    width: 60%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; 
-    padding: 10px 0;
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 0;
+  gap: 30px;
 }
 
 .NavBar h1 {
-    color: white;
-    font-size: 24px;
+  color: white;
+  font-size: 24px;
 }
 
 .NavBar ul {
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 .NavBar li {
-    margin-left: 20px;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    list-style: none;
-    text-decoration: none;
+  margin-left: 20px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
 }
 
 .NavBar li:hover {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
-.NavBar li a{
-    margin-left: 20px;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    list-style: none;
-    text-decoration: none;
-    color: white;
-}
-
-.langBtn {
+.NavBar li a {
   margin-left: 20px;
-  background: green;
   color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
+  font-size: 18px;
   cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.langBtn:hover {
-  background: darkgreen;
+.NavBar li a:hover {
+  color: #00ff88;
 }
 
+/* =========================
+   BOTON IDIOMA
+========================= */
+.langSwitch {
+  width: 92px;
+  height: 46px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+  overflow: visible;
+}
 
+.langSwitch:hover {
+  transform: scale(1.03);
+}
+
+/* banderas fijas de fondo */
+.flagStatic {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.45;
+  transform: scale(0.9);
+  transition: all 0.35s ease;
+}
+
+/* cuando está en español -> bandera ARG más visible */
+.langSwitch .flagStatic:first-of-type {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* cuando está en inglés -> bandera USA más visible */
+.langSwitch.active .flagStatic:first-of-type {
+  opacity: 0.45;
+  transform: scale(0.9);
+}
+
+.langSwitch.active .flagStatic:last-of-type {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* círculo deslizable */
+.switchCircle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: transparent;
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+  z-index: 2;
+}
+
+/* bandera activa (la grande) */
+.flagCircle {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.35s ease;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+/* cuando está en inglés */
+.langSwitch.active .switchCircle {
+  left: 50px;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+@media (max-width: 768px) {
+  .NavBar .container {
+    width: 85%;
+    gap: 20px;
+  }
+
+  .NavBar ul {
+    gap: 12px;
+  }
+
+  .NavBar li,
+  .NavBar li a {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .langSwitch {
+    width: 86px;
+    height: 42px;
+  }
+
+  .switchCircle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .flagCircle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .langSwitch.active .switchCircle {
+    left: 46px;
+  }
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
 @media (max-width: 480px) {
-    .NavBar {
-        padding: 5px 0;
-    }
+  .NavBar {
+    padding: 5px 0;
+  }
 
-    .NavBar .container {
-        width: 90%;
-        flex-direction: row;
-        align-items: center;
-    }
+  .NavBar .container {
+    width: 92%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
 
-    .NavBar h1 {
-        font-size: 20px;
-        text-align: center;
-    }
+  .NavBar ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    padding-top: 0;
+    gap: 12px;
+  }
 
-    .NavBar ul {
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        padding-top: 10px;
-    }
+  .NavBar li {
+    margin: 0;
+    font-size: 14px;
+  }
 
-    .NavBar li {
-        margin: 10px 0;
-        font-size: 16px;
-    }
+  .NavBar li a {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .langSwitch {
+    width: 80px;
+    height: 40px;
+    padding: 0 8px;
+  }
+
+  .flagStatic {
+    width: 18px;
+    height: 18px;
+  }
+
+  .switchCircle {
+    width: 36px;
+    height: 36px;
+    top: 2px;
+    left: 0;
+  }
+
+  .flagCircle {
+    width: 28px;
+    height: 28px;
+  }
+
+  .langSwitch.active .switchCircle {
+    left: 44px;
+  }
 }

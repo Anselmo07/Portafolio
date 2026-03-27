@@ -6,10 +6,11 @@ const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState("es");
 
-  // guardar en localStorage
   useEffect(() => {
     const savedLang = localStorage.getItem("lang");
-    if (savedLang) setLang(savedLang);
+    if (savedLang) {
+      setLang(savedLang);
+    }
   }, []);
 
   const toggleLang = () => {
