@@ -7,7 +7,6 @@
   align-items: center;
 }
 
-/* TITULO */
 .contactTitle {
   font-size: 40px;
   color: white;
@@ -20,7 +19,6 @@
   margin-bottom: 3rem;
 }
 
-/* TARJETA */
 .contactCard {
   width: 100%;
   max-width: 500px;
@@ -36,13 +34,11 @@
   transition: all 0.3s ease;
 }
 
-/* HOVER */
 .contactCard:hover {
   border-color: red;
   transform: scale(1.02);
 }
 
-/* INPUTS */
 .contactCard input,
 .contactCard textarea {
   width: 100%;
@@ -55,19 +51,16 @@
   outline: none;
 }
 
-/* FOCUS */
 .contactCard input:focus,
 .contactCard textarea:focus {
   border-color: green;
 }
 
-/* TEXTAREA */
 .contactCard textarea {
   min-height: 120px;
   resize: none;
 }
 
-/* BOTON */
 .contactCard button {
   padding: 0.9rem;
   background: green;
@@ -80,13 +73,11 @@
   transition: all 0.3s ease;
 }
 
-/* HOVER BOTON */
 .contactCard button:hover {
   background: darkgreen;
   transform: scale(1.05);
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .contactTitle {
     font-size: 40px;

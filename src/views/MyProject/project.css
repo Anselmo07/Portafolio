@@ -1,27 +1,24 @@
-/* CONTENEDOR GENERAL */
+
 .project {
   background: black;
   padding-bottom: 4rem;
   background-color: black;
 }
 
-/* TITULO */
 .projectTitle {
   text-align: center;
   margin: 7% 0 3% 0;
   color: white;
 }
 
-/* GRID DE CARDS */
 .cardContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 👈 2 por fila */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 0 5%;
   align-items: start;
 }
 
-/* CARD */
 .card {
   border: 3px solid green !important;
   border-radius: 12px;
@@ -32,7 +29,6 @@
   position: relative;
 }
 
-/* HOVER */
 .card:hover {
   border: 2px solid red;
   transform: scale(1.02);
@@ -40,7 +36,6 @@
   background-color: black !important;
 }
 
-/* TITULO */
 .cardTitle {
   margin: 0;
   padding: 1rem;
@@ -48,13 +43,11 @@
   text-align: center;
 }
 
-/* CONTENEDOR VERDE DE IMAGEN */
 .cardBody {
   background-color: black !important;
   padding: 1rem;
 }
 
-/* IMAGEN */
 .imgProject {
   width: 100%;
   height: 250px;
@@ -62,8 +55,6 @@
   background: black;
 }
 
-
-/* INFO MORE */
 .InfoMore {
   display: flex;
   justify-content: space-between;
@@ -89,7 +80,6 @@
   background: darkgreen;
 }
 
-/* DESCRIPCION */
 .InfoMoreDescription {
   background: black;
   color: white;
@@ -112,9 +102,8 @@
   }
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
   .cardContainer {
-    grid-template-columns: 1fr; /* 👈 1 por fila en mobile */
+    grid-template-columns: 1fr;
   }
 }

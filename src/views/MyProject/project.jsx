@@ -3,7 +3,6 @@ import projects from "./projects.js";
 import { useLanguage } from "../../context/languageContext";
 import "./project.css";
 
-// imágenes
 import cdlRecruiter from "../../assets/cdlrecruiterPorfolio.png";
 import ecommerce from "../../assets/ecommerce.png";
 import chatbot from "../../assets/chatbot.png";

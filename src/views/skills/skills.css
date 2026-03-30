@@ -8,7 +8,6 @@
   color: white;
 }
 
-/* GRID MODERNO */
 .skillsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -16,32 +15,27 @@
   padding: 0 10%;
 }
 
-/* CARD */
 .cardSkill {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
   background: black;
-  /* border: 2px solid green; */
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 
-/* HOVER */
 .cardSkill:hover {
   transform: scale(1.1);
   border-color: red;
 }
 
-/* IMG */
 .cardSkill img {
   width: 80px;
   height: 80px;
   object-fit: contain;
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
   .skillsGrid {
     grid-template-columns: repeat(2, 1fr);
