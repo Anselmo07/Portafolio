@@ -1,6 +1,7 @@
 import "./navBar.css";
 import { useLanguage } from "../../context/languageContext";
 
+import perfilImg from "../../assets/perfil.png";
 import argFlag from "../../assets/Arg.png";
 import usaFlag from "../../assets/us.png";
 
@@ -9,7 +10,15 @@ const NavBar = () => {
 
   return (
     <nav className="NavBar">
-      <div className="container">
+      <div className="navContainer">
+
+        <div className="left">
+          <div className="profile">
+            <img src={perfilImg} alt="Foto de perfil" />
+          </div>
+        </div>
+
+      <div className="right">
         <ul>
           <li>
             <a href="#home">
@@ -43,6 +52,8 @@ const NavBar = () => {
             />
           </div>
         </button>
+
+      </div>
       </div>
     </nav>
   );
