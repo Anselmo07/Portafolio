@@ -15,6 +15,7 @@
 /* =========================
   CONTAINER
 ========================= */
+
 .navContainer {
   width: 100%;
   display: flex;
@@ -26,6 +27,7 @@
 /* =========================
   LEFT / RIGHT
 ========================= */
+
 .left {
   display: flex;
   align-items: center;
@@ -49,7 +51,7 @@
 }
 
 /* =========================
-   NAV LINKS
+  NAV LINKS
 ========================= */
 .NavBar ul {
   display: flex;
@@ -71,8 +73,9 @@
 }
 
 /* =========================
-   BOTON IDIOMA
+  BOTON IDIOMA
 ========================= */
+
 .langSwitch {
   width: 92px;
   height: 46px;
