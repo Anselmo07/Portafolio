@@ -1,7 +1,6 @@
 import "./skills.css";
 import { useLanguage } from "../../context/languageContext";
 
-// imágenes
 import ts from "../../assets/typescript.png";
 import api from "../../assets/api.png";
 import git from "../../assets/Github.png";

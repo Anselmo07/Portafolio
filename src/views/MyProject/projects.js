@@ -1,7 +1,9 @@
 const projects = [
   {
     id: 1,
+    year: "2023",
     title: "CDL Recruiter",
+    tech: "React • Node.js",
     link: "https://www.cdl-recruiters.com",
     img: "cdlRecruiter",
     description: {
@@ -9,9 +11,12 @@ const projects = [
       en: "CDL Recruiter is a web platform designed to optimize the recruitment of commercial driver license (CDL) drivers. It focuses on improving user experience and automating the hiring process for transportation companies."
     }
   },
+
   {
     id: 2,
+    year: "2023",
     title: "E-commerce",
+    tech: "React • Express • PostgreSQL",
     link: "https://store-jade-five.vercel.app",
     img: "ecommerce",
     description: {
@@ -19,9 +24,12 @@ const projects = [
       en: "Free Market is an e-commerce web application designed to provide a simple, fast, and engaging shopping experience. Users can browse products, search easily, and add items to their cart in real time without needing to sign up."
     }
   },
+
   {
     id: 3,
+    year: "2024",
     title: "Chatbot",
+    tech: "React • AI Chat",
     link: "https://chatbot-de-sushi-anselmos-projects-96233391.vercel.app/",
     img: "chatbot",
     description: {
@@ -29,9 +37,12 @@ const projects = [
       en: "This is an interactive chatbot for a sushi restaurant where users can check the menu, place orders, and get information automatically."
     }
   },
+
   {
     id: 4,
+    year: "2024",
     title: "Movies",
+    tech: "React • API REST",
     link: "https://cine-atuxthdcx-anselmos-projects-96233391.vercel.app",
     img: "movies",
     description: {
@@ -39,9 +50,12 @@ const projects = [
       en: "Web application to explore a movie catalog with detailed information such as rating, description, duration, director, and genre. It also includes upcoming releases."
     }
   },
+
   {
     id: 5,
+    year: "2025",
     title: "Calculator",
+    tech: "React",
     link: "https://calculator-five-indol.vercel.app/calculator",
     img: "calculator",
     description: {
@@ -49,9 +63,12 @@ const projects = [
       en: "Calculator that allows basic operations such as addition, subtraction, division, and multiplication."
     }
   },
+
   {
     id: 6,
+    year: "2025",
     title: "API Rest",
+    tech: "NestJS • PostgreSQL",
     link: "https://ecommerce-00vc.onrender.com/API",
     img: "swagger",
     description: {

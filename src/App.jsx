@@ -12,7 +12,7 @@ import Footer from './components/footer/footer';
 function App() {
 
   return (
-    <div style={{ backgroundColor: 'black', padding: '1px', color:'white'}}>
+    <div >
         <NavBar />
         <Home />
         <About />
