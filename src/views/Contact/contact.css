@@ -1,84 +1,205 @@
-/* CONTENEDOR */
 .contact {
-  padding: 6rem 1rem;
+  position: relative;
+
+  padding: 8rem 1rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  overflow: hidden;
 }
 
+/* PERSONA */
+
+.contactCharacter {
+  position: absolute;
+
+  left: 50%;
+
+  top: 55%;
+
+  transform:
+    translate(-120%, -50%);
+
+  width: 340px;
+
+  opacity: 0;
+
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 0 15px rgba(0,229,255,0.25));
+}
+
+/* CUANDO APARECE */
+
+.showCharacter {
+  opacity: 1;
+
+  transform:
+    translate(-180%, -50%)
+     rotate(-2deg);
+}
+/* TITLES */
+
 .contactTitle {
-  font-size: 40px;
+  font-size: 3rem;
   color: white;
-  margin-bottom: 2rem;
+
+  margin-bottom: 1rem;
+
+  z-index: 10;
 }
 
 .contactSubtitle {
-  font-size: 20px;
   color: #aaa;
+
   margin-bottom: 3rem;
+
+  text-align: center;
+
+  z-index: 10;
 }
+
+/* CARD */
 
 .contactCard {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
+
   padding: 2rem;
-  border: 2px solid green;
-  border-radius: 20px;
-  background: #0a0a0a;
+
+  border-radius: 24px;
+
+  background: rgba(0,0,0,0.7);
+
+  border: 1px solid rgba(0,229,255,0.25);
+
+  backdrop-filter: blur(10px);
 
   display: flex;
   flex-direction: column;
+
   gap: 1.2rem;
 
-  transition: all 0.3s ease;
+  position: relative;
+
+  z-index: 5;
+
+  transition: all 0.4s ease;
 }
 
 .contactCard:hover {
-  border-color: red;
-  transform: scale(1.02);
+  transform: translateY(-5px);
+
+  border-color: #00e5ff;
+
+  box-shadow:
+    0 0 15px rgba(0,229,255,0.25),
+    0 0 35px rgba(0,229,255,0.15);
 }
+
+/* INPUTS */
 
 .contactCard input,
 .contactCard textarea {
   width: 100%;
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: 1px solid #333;
-  background: black;
+
+  padding: 1rem;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(255,255,255,0.03);
+
   color: white;
-  font-size: 16px;
+
   outline: none;
+
+  transition: all 0.3s ease;
 }
 
 .contactCard input:focus,
 .contactCard textarea:focus {
-  border-color: green;
+  border-color: #00e5ff;
+
+  box-shadow:
+    0 0 10px rgba(0,229,255,0.2);
 }
 
+/* TEXTAREA */
+
 .contactCard textarea {
-  min-height: 120px;
+  min-height: 140px;
+
   resize: none;
 }
 
+/* BUTTON */
+
 .contactCard button {
-  padding: 0.9rem;
-  background: green;
-  color: white;
+  padding: 1rem;
+
+  border-radius: 12px;
+
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+
+  background: #00bfff;
+
+  color: white;
+
   font-weight: bold;
+
   cursor: pointer;
+
   transition: all 0.3s ease;
 }
 
 .contactCard button:hover {
-  background: darkgreen;
-  transform: scale(1.05);
+  transform: scale(1.03);
+
+  box-shadow:
+    0 0 10px #00e5ff,
+    0 0 25px rgba(0,229,255,0.4);
 }
 
-@media (max-width: 768px) {
-  .contactTitle {
-    font-size: 40px;
+@keyframes floatCharacter {
+  0% {
+    transform:
+      translate(-82%, -50%)
+      translateY(0px);
+  }
+
+  50% {
+    transform:
+      translate(-82%, -50%)
+      translateY(-10px);
+  }
+
+  100% {
+    transform:
+      translate(-82%, -50%)
+      translateY(0px);
   }
 }
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .contactCharacter {
+    display: none;
+  }
+
+  .contactTitle {
+    font-size: 2rem;
+  }
+}
+

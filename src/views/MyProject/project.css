@@ -347,6 +347,52 @@
   animation: fadeIn 0.4s ease;
 }
 
+/* BOTON VER MAS */
+
+.timelineButtonContainer {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: 2rem;
+
+  position: relative;
+  z-index: 20;
+}
+
+.timelineButton {
+  background: rgba(0,0,0,0.85);
+
+  color: #00e5ff;
+
+  border: 1px solid rgba(0,229,255,0.4);
+
+  padding: 1rem 2.5rem;
+
+  border-radius: 40px;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 0 10px rgba(0,229,255,0.25);
+}
+
+.timelineButton:hover {
+  transform: translateY(-3px);
+
+  background: rgba(0,229,255,0.1);
+
+  box-shadow:
+    0 0 10px #00e5ff,
+    0 0 20px rgba(0,229,255,0.5);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

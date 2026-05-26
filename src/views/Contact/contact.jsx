@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useLanguage } from "../../context/languageContext";
+
+import me from "../../assets/perfil.png";
+
 import "./contact.css";
 
 const Contact = () => {
   const { lang } = useLanguage();
+
+  const [visible, setVisible] = useState(false);
+
+  const sectionRef = useRef(null);
 
   const [form, setForm] = useState({
     name: "",
@@ -12,6 +19,23 @@ const Contact = () => {
     title: "",
     message: "",
   });
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.35,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const text = {
     es: {
@@ -27,6 +51,7 @@ const Contact = () => {
       success: "Mensaje enviado correctamente 🚀",
       error: "Error al enviar el mensaje ❌",
     },
+
     en: {
       title: "Contact",
       subtitle:
@@ -63,7 +88,14 @@ const Contact = () => {
       )
       .then(() => {
         alert(currentText.success);
-        setForm({ name: "", surname: "", email: "", title: "", message: "" });
+
+        setForm({
+          name: "",
+          surname: "",
+          email: "",
+          title: "",
+          message: "",
+        });
       })
       .catch(() => {
         alert(currentText.error);
@@ -71,12 +103,33 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact" id="contact">
-      <h2 className="contactTitle">{currentText.title}</h2>
+    <section
+      className="contact"
+      id="contact"
+      ref={sectionRef}
+    >
+      {/* PERSONA */}
 
-      <p className="contactSubtitle">{currentText.subtitle}</p>
+      <img
+        src={me}
+        alt="me"
+        className={`contactCharacter ${
+          visible ? "showCharacter" : ""
+        }`}
+      />
 
-      <form className="contactCard" onSubmit={handleSubmit}>
+      <h2 className="contactTitle">
+        {currentText.title}
+      </h2>
+
+      <p className="contactSubtitle">
+        {currentText.subtitle}
+      </p>
+
+      <form
+        className="contactCard"
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           name="name"
@@ -121,7 +174,9 @@ const Contact = () => {
           required
         />
 
-        <button type="submit">{currentText.button}</button>
+        <button type="submit">
+          {currentText.button}
+        </button>
       </form>
     </section>
   );

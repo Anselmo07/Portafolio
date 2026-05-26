@@ -1,7 +1,7 @@
 const projects = [
   {
     id: 1,
-    year: "2023",
+    year: "2025",
     title: "CDL Recruiter",
     tech: "React • Node.js",
     link: "https://www.cdl-recruiters.com",
@@ -14,7 +14,7 @@ const projects = [
 
   {
     id: 2,
-    year: "2023",
+    year: "2026",
     title: "E-commerce",
     tech: "React • Express • PostgreSQL",
     link: "https://store-jade-five.vercel.app",
@@ -27,7 +27,7 @@ const projects = [
 
   {
     id: 3,
-    year: "2024",
+    year: "2025",
     title: "Chatbot",
     tech: "React • AI Chat",
     link: "https://chatbot-de-sushi-anselmos-projects-96233391.vercel.app/",
@@ -66,7 +66,7 @@ const projects = [
 
   {
     id: 6,
-    year: "2025",
+    year: "2024",
     title: "API Rest",
     tech: "NestJS • PostgreSQL",
     link: "https://ecommerce-00vc.onrender.com/API",

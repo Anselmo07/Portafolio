@@ -22,6 +22,7 @@ const images = {
 function Project() {
   const [openCard, setOpenCard] = useState(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [showAll, setShowAll] = useState(false);
 
   const { lang } = useLanguage();
 
@@ -46,6 +47,14 @@ function Project() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const orderedProjects = [...projects].sort(
+    (a, b) => b.year - a.year
+  );
+
+  const visibleProjects = showAll
+    ? orderedProjects
+    : orderedProjects.slice(0, 3);
+
   return (
     <section id="project" className="project">
       <h2 className="projectTitle">
@@ -62,7 +71,7 @@ function Project() {
           />
         </div>
 
-        {projects.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <div
             key={project.id}
             className={`timelineItem ${
@@ -120,8 +129,16 @@ function Project() {
                 </div>
               )}
             </div>
-          </div>
+          </div>        
         ))}
+        <div className="timelineButtonContainer">
+              <button
+                className="timelineButton"
+                onClick={() => setShowAll(!showAll)}
+              >
+                {showAll ? "Ver menos" : "Ver más"}
+              </button>
+            </div>
       </div>
     </section>
   );
