@@ -10,47 +10,13 @@
   overflow: hidden;
 }
 
-/* PERSONA */
-
-.contactCharacter {
-  position: absolute;
-
-  left: 50%;
-
-  top: 55%;
-
-  transform:
-    translate(-120%, -50%);
-
-  width: 340px;
-
-  opacity: 0;
-
-  transition:
-    transform 1s ease,
-    opacity 1s ease;
-
-  z-index: 1;
-
-  pointer-events: none;
-
-  filter:
-    drop-shadow(0 0 15px rgba(0,229,255,0.25));
-}
-
-/* CUANDO APARECE */
-
-.showCharacter {
-  opacity: 1;
-
-  transform:
-    translate(-180%, -50%)
-     rotate(-2deg);
-}
+/* ========================= */
 /* TITLES */
+/* ========================= */
 
 .contactTitle {
   font-size: 3rem;
+
   color: white;
 
   margin-bottom: 1rem;
@@ -66,9 +32,145 @@
   text-align: center;
 
   z-index: 10;
+
+  max-width: 700px;
 }
 
-/* CARD */
+/* ========================= */
+/* LEFT CHARACTER */
+/* ========================= */
+
+.leftCharacter {
+  position: absolute;
+
+  top: 55%;
+  left: 50%;
+
+  width: 340px;
+
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%);
+
+  transition:
+    transform 1.3s ease,
+    opacity 1.3s ease;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.leftCharacter img {
+  width: 100%;
+
+  filter:
+    drop-shadow(0 0 20px rgba(0,229,255,0.35));
+
+  animation:
+    floatingLeft 4s ease-in-out infinite;
+}
+
+/* ========================= */
+/* RIGHT CHARACTER */
+/* ========================= */
+
+.rightCharacter {
+  position: absolute;
+
+  top: 55%;
+  left: 50%;
+
+  width: 430px;
+
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%);
+
+  transition:
+    transform 1.3s ease,
+    opacity 1.3s ease;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.rightCharacter img {
+  width: 100%;
+
+  filter:
+    drop-shadow(0 0 20px rgba(0,229,255,0.35));
+
+  animation:
+    floatingRight 4s ease-in-out infinite;
+}
+
+/* ========================= */
+/* SHOW ANIMATIONS */
+/* ========================= */
+
+.showLeft {
+  opacity: 1;
+
+  transform:
+    translate(-145%, -50%)
+    rotate(-4deg);
+}
+
+.showRight {
+  opacity: 1;
+
+  transform:
+    translate(45%, -50%)
+    rotate(4deg);
+}
+
+/* ========================= */
+/* FLOATING */
+/* ========================= */
+
+@keyframes floatingLeft {
+
+  0% {
+    transform:
+      translateY(0px);
+  }
+
+  50% {
+    transform:
+      translateY(-12px);
+  }
+
+  100% {
+    transform:
+      translateY(0px);
+  }
+}
+
+@keyframes floatingRight {
+
+  0% {
+    transform:
+      translateY(0px);
+  }
+
+  50% {
+    transform:
+      translateY(-12px);
+  }
+
+  100% {
+    transform:
+      translateY(0px);
+  }
+}
+
+/* ========================= */
+/* CONTACT CARD */
+/* ========================= */
 
 .contactCard {
   width: 100%;
@@ -78,7 +180,7 @@
 
   border-radius: 24px;
 
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.72);
 
   border: 1px solid rgba(0,229,255,0.25);
 
@@ -106,7 +208,9 @@
     0 0 35px rgba(0,229,255,0.15);
 }
 
+/* ========================= */
 /* INPUTS */
+/* ========================= */
 
 .contactCard input,
 .contactCard textarea {
@@ -127,6 +231,11 @@
   transition: all 0.3s ease;
 }
 
+.contactCard input::placeholder,
+.contactCard textarea::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
 .contactCard input:focus,
 .contactCard textarea:focus {
   border-color: #00e5ff;
@@ -135,7 +244,9 @@
     0 0 10px rgba(0,229,255,0.2);
 }
 
+/* ========================= */
 /* TEXTAREA */
+/* ========================= */
 
 .contactCard textarea {
   min-height: 140px;
@@ -143,7 +254,9 @@
   resize: none;
 }
 
+/* ========================= */
 /* BUTTON */
+/* ========================= */
 
 .contactCard button {
   padding: 1rem;
@@ -171,35 +284,47 @@
     0 0 25px rgba(0,229,255,0.4);
 }
 
-@keyframes floatCharacter {
-  0% {
-    transform:
-      translate(-82%, -50%)
-      translateY(0px);
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 1200px) {
+
+  .leftCharacter {
+    width: 260px;
   }
 
-  50% {
-    transform:
-      translate(-82%, -50%)
-      translateY(-10px);
+  .rightCharacter {
+    width: 320px;
   }
 
-  100% {
+  .showLeft {
     transform:
-      translate(-82%, -50%)
-      translateY(0px);
+      translate(-135%, -50%);
+  }
+
+  .showRight {
+    transform:
+      translate(35%, -50%);
   }
 }
 
-/* MOBILE */
-
 @media (max-width: 900px) {
-  .contactCharacter {
+
+  .leftCharacter,
+  .rightCharacter {
     display: none;
   }
 
   .contactTitle {
     font-size: 2rem;
   }
-}
 
+  .contactSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .contactCard {
+    padding: 1.5rem;
+  }
+}

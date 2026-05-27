@@ -29,6 +29,10 @@
     border: 3px solid green;
 }
 
+.footerP{
+    color: white;
+}
+
 
 
 @media (max-width: 768px) {

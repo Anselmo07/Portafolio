@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useLanguage } from "../../context/languageContext";
 
-import me from "../../assets/perfil.png";
+import callMe from "../../assets/callme.png";
+import codingMe from "../../assets/codeVibe.png"
 
 import "./contact.css";
 
@@ -110,13 +111,13 @@ const Contact = () => {
     >
       {/* PERSONA */}
 
-      <img
-        src={me}
-        alt="me"
-        className={`contactCharacter ${
-          visible ? "showCharacter" : ""
-        }`}
-      />
+        <div className={`leftCharacter ${visible ? "showLeft" : ""}`}>
+      <img src={callMe} alt="call character" />
+    </div>
+
+    <div className={`rightCharacter ${visible ? "showRight" : ""}`}>
+      <img src={codingMe} alt="coding character" />
+    </div>
 
       <h2 className="contactTitle">
         {currentText.title}
