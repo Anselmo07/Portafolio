@@ -1,65 +1,138 @@
 .home {
-    margin: 2% auto;
+    position: relative;
+
+    margin: 4rem auto;
+
     max-width: 80%;
-    border-bottom: 1px solid black;
+
+    padding-bottom: 4rem;
+
     overflow: hidden;
+
+    border-bottom:
+        1px solid rgba(0,229,255,0.18);
 }
+
+/* ========================= */
+/* TITLES */
+/* ========================= */
 
 .home h2 {
     font-size: 76px;
+
     margin: 0 5px 30px 0;
+
     color: white;
+
+    line-height: 1.1;
+
+    text-shadow:
+        0 0 10px rgba(0,229,255,0.08);
 }
 
 .home h3 {
     font-size: 50px;
+
+    color: rgba(255,255,255,0.88);
+
+    font-weight: 400;
 }
+
+/* ========================= */
+/* NAME */
+/* ========================= */
 
 .name {
-    color: greenyellow;
+    color: rgba(0,229,255,0.95);
+
+    text-shadow:
+        0 0 10px rgba(0,229,255,0.45),
+        0 0 20px rgba(0,229,255,0.25);
 }
+
+/* ========================= */
+/* TYPEWRITER */
+/* ========================= */
 
 .letra-por-letra {
-    color: green;
+
+    color: rgba(0,229,255,0.9);
+
     letter-spacing: 4px;
-    animation: text 3s forwards steps(12);
-    overflow: hidden;
+
     position: relative;
+
     display: inline-block;
+
     white-space: nowrap;
+
+    overflow: hidden;
+
+    width: fit-content;
+
+    animation:
+        text 3s steps(22) forwards;
+
+    text-shadow:
+        0 0 10px rgba(0,229,255,0.45),
+        0 0 20px rgba(0,229,255,0.2);
 }
 
-.letra-por-letra::before {
-    content: "";
-    width: 2px;
-    height: auto;
+/* CURSOR */
+
+.letra-por-letra::after {
+    content: "|";
+
     position: absolute;
-    right: 0;
-    top: 0;
-    animation: titilar 0.7s steps(1) infinite;
+
+    right: -8px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: rgba(0,229,255,0.95);
+
+    text-shadow:
+        0 0 10px rgba(0,229,255,0.8),
+        0 0 20px rgba(0,229,255,0.5);
+
+    animation:
+        titilar 0.7s infinite;
 }
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
 
 @media (max-width: 768px) {
+
     .home {
         max-width: 90%;
+
+        margin-top: 2rem;
     }
 
     .home h2 {
-        font-size: 36px;
+        font-size: 42px;
     }
 
     .home h3 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .letra-por-letra {
-        animation: text 2.5s forwards steps(8);
+        letter-spacing: 2px;
+
+        animation:
+            text 2.5s forwards steps(8);
     }
 }
 
 @media (max-width: 480px) {
+
     .home h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .home h3 {
@@ -67,17 +140,36 @@
     }
 
     .letra-por-letra {
-        letter-spacing: 2px;
+        letter-spacing: 1px;
     }
 }
 
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
 @keyframes text {
-    from { width: 0%; }
-    to { width: 100%; }
+
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 -30px 0 0);
+    }
 }
 
 @keyframes titilar {
-    from { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+
+    from {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

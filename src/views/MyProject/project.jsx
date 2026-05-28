@@ -9,6 +9,7 @@ import chatbot from "../../assets/chatbot.png";
 import movies from "../../assets/pelis.png";
 import calculator from "../../assets/calculator.png";
 import swagger from "../../assets/SWAGGER.png";
+import pizza from "../../assets/pizza.png";
 
 const images = {
   cdlRecruiter,
@@ -16,7 +17,8 @@ const images = {
   chatbot,
   movies,
   calculator,
-  swagger
+  swagger,
+  pizza
 };
 
 function Project() {

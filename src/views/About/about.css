@@ -13,13 +13,52 @@
 }
 
 .curriculm {
-    text-decoration: none;
-    border: 2px solid green;
-    border-radius: 13px;
-    color: black;
-    background-color: greenyellow;
-    padding: 1%;
     display: inline-block;
+
+    padding:
+        0.8rem 1.6rem;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    background:
+        rgba(0,229,255,0.12);
+
+    border:
+        1px solid rgba(0,229,255,0.35);
+
+    backdrop-filter: blur(6px);
+
+    transition:
+        all 0.35s ease;
+
+    box-shadow:
+        0 0 10px rgba(0,229,255,0.12);
+}
+
+.curriculm:hover {
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    color: white;
+
+    border:
+        1px solid rgba(0,229,255,0.8);
+
+    background:
+        rgba(0,229,255,0.2);
+
+    box-shadow:
+        0 0 12px rgba(0,229,255,0.35),
+        0 0 30px rgba(0,229,255,0.2);
 }
 
 .langToggle {

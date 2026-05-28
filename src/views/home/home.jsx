@@ -9,11 +9,16 @@ const Home = () => {
     const elements = document.querySelectorAll(".letra-por-letra");
 
     const handleAnimationEnd = (event) => {
+
+      if (event.animationName !== "text") return;
+
       event.target.classList.remove("letra-por-letra");
+
       void event.target.offsetWidth;
+
       event.target.classList.add("letra-por-letra");
     };
-
+    
     elements.forEach((element) =>
       element.addEventListener("animationend", handleAnimationEnd)
     );

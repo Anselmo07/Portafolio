@@ -59,23 +59,38 @@ const projects = [
     link: "https://calculator-five-indol.vercel.app/calculator",
     img: "calculator",
     description: {
-      es: "Calculadora que permite realizar operaciones básicas como suma, resta, división y multiplicación.",
-      en: "Calculator that allows basic operations such as addition, subtraction, division, and multiplication."
+      es: "Aplicación web desarrollada en React que permite realizar operaciones matemáticas básicas mediante una interfaz rápida, moderna e intuitiva.",
+
+      en: "Web application built with React that allows users to perform basic mathematical operations through a fast, modern, and intuitive interface."
     }
   },
 
-  {
+    {
     id: 6,
     year: "2024",
-    title: "API Rest",
+    title: "E-Commerce API",
     tech: "NestJS • PostgreSQL",
     link: "https://ecommerce-00vc.onrender.com/API",
     img: "swagger",
     description: {
-      es: "Backend de e-commerce desarrollado con NestJS y PostgreSQL que permite gestionar productos y usuarios.",
-      en: "E-commerce backend built with NestJS and PostgreSQL that allows managing products and users."
+      es: "API REST desarrollada con NestJS y PostgreSQL para la gestión de productos, usuarios y operaciones de un sistema e-commerce.",
+
+      en: "REST API built with NestJS and PostgreSQL for managing products, users, and operations within an e-commerce system."
     }
-  }
+  },
+    {
+    id: 7,
+    year: "2026",
+    title: "El Horno de Facu",
+    tech: "React • TypeScript • Vite",
+    link: "https://TU-LINK.com",
+    img: "pizza",
+    description: {
+      es: "Landing page moderna desarrollada para una pizzería enfocada en ventas por mayor y menor. Cuenta con diseño responsive, integración con WhatsApp, promociones dinámicas y una experiencia optimizada para dispositivos móviles y escritorio.",
+      
+      en: "Modern landing page developed for a pizza business focused on wholesale and retail sales. Features responsive design, WhatsApp integration, dynamic promotions, and an optimized experience for both mobile and desktop devices."
+    }
+  },
 ];
 
 export default projects;
