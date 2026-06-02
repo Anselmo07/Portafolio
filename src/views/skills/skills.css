@@ -1,5 +1,11 @@
 .skills {
-  padding: 3rem 0 0 0;
+  padding: 3rem 0 4rem 0;
+  
+  margin-left: 10%;
+  margin-right: 10%;
+
+  border-bottom:
+        1px solid rgba(0,229,255,0.18);
 }
 
 .titleSkill {
@@ -36,6 +42,12 @@
 }
 
 @media (max-width: 900px) {
+
+  .skills{
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
   .skillsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
